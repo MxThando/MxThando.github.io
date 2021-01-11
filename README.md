@@ -1,5 +1,2 @@
-# MxThando.github.io
-
-
-
-Personal website
+Link to personal website:
+https://MxThando.github.io
