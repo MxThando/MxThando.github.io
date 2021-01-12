@@ -1,7 +1,19 @@
-.container > div {
+.grid > div {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color: #ffeead;
+    color: A2F933;
+}
+
+.nav-ul{
+  font-size: 14px;
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: A2F933;
 }
