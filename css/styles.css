@@ -18,20 +18,3 @@ grid-column: 3 / -1;
 .contact{
   grid-column: 2 / -1;
 }
-.h2{
-  font-size: 16px;
-  font-weight: normal;
-  margin: 20px 40px 20px 40px;
-}
-
-.profile-photo{
-  border-radius: 50%
-  width: 200px;
-  align-content: center;
-}
-
-.profile-header{
-  font-size: 20px;
-  font-weight: normal;
-  margin: 10px;
-}

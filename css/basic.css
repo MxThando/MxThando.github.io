@@ -7,6 +7,7 @@
 }
 
 html, body {
+  font-family: 'Open Sans', sans-serif;
   background-color: #ffeead;
   margin: 10px;
 }
@@ -25,6 +26,9 @@ html, body {
 
 .grid > div:nth-child(4n) {
       background-color: #ffcc5c;
+}
+.grid > div:footer {
+      background-color: #000000;
 }
 
 .nav-ul > div {
@@ -51,7 +55,20 @@ p {
   font-color: #000000;
   font-family: sans-serif;
 }
-h2{
-  font-color: #000000;
-  font-family: sans-serif;
+.h2{
+  font-size: 16px;
+  font-weight: normal;
+  margin: 20px 40px 20px 40px;
+}
+
+.profile-photo{
+  border-radius: 50%
+  width: 200px;
+  align-content: center;
+}
+
+.profile-header{
+  font-size: 20px;
+  font-weight: normal;
+  margin: 10px;
 }
