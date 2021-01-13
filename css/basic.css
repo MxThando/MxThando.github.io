@@ -45,6 +45,7 @@ html, body {
   position: relative;
   display: block;
   padding: 10px 15px;
+}
 
 p {
   font-color: #000000;
@@ -52,5 +53,5 @@ p {
 }
 h2{
   font-color: #000000;
-  font-family: sans-serif;  
+  font-family: sans-serif;
 }
