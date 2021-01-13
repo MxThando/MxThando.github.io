@@ -1,20 +1,37 @@
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400, 1fr));
-  grid-template-rows: min-max(200px, 1fr);
+  grid-template-columns: repeat(3 / 1fr);
+  grid-template-rows: 200px 200px 200px 100px;
   grid-auto-flow: dense;
 }
 .about{
-
+  grid-column: 2/-1;
 }
 
 .skills{
-
+grid-column: 2 / 3;
 }
 .interests{
-
+grid-column: 3 / -1;
 }
 .contact{
-  
+  grid-column: 2 / -1;
+}
+.h2{
+  font-size: 16px;
+  font-weight: normal;
+  margin: 20px 40px 20px 40px;
+}
+
+.profile-photo{
+  border-radius: 50%
+  width: 200px;
+  align-content: center;
+}
+
+.profile-header{
+  font-size: 20px;
+  font-weight: normal;
+  margin: 10px;
 }
