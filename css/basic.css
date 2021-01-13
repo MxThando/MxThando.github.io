@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     font-size: 2em;
-    color: A2F933;
+    color: 000000;
 }
 
 html, body {
@@ -31,17 +31,26 @@ html, body {
   font-size: 14px;
   list-style-type: none;
   position: relative;
-  top: 0;
-  margin: 0;
-  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
   overflow: hidden;
   width: 100%;
 }
-.p {
+
+.nav > li > a {
+  font-color: #000000;
+  font-family: sans-serif;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+
+p {
   font-color: #000000;
   font-family: sans-serif;
 }
-.li{
+h2{
   font-color: #000000;
-  font-family: sans-serif;
+  font-family: sans-serif;  
 }
