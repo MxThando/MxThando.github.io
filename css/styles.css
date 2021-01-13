@@ -2,9 +2,13 @@
 .grid{
   display: grid;
   grid-template-columns: repeat(3 / 1fr);
-  grid-template-rows: 200px 200px 200px 100px;
+  grid-template-rows: 40px 200px 200px 200px 100px;
   grid-auto-flow: dense;
 }
+.menu{
+grid-column: auto;
+}
+
 .about{
   grid-column: 2/-1;
 }

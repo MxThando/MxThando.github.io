@@ -11,20 +11,22 @@ html, body {
   background-color: #ffeead;
   margin: 10px;
 }
-
 .grid > div:nth-child(1n) {
+  background-color: #000000;
+}
+.grid > div:nth-child(2n) {
   background-color: #96ceb4;
 }
 
-.grid > div:nth-child(3n) {
+.grid > div:nth-child(4n) {
   background-color: #88d8b0;
 }
 
-.grid > div:nth-child(2n) {
+.grid > div:nth-child(3n) {
       background-color: #ff6f69;
 }
 
-.grid > div:nth-child(4n) {
+.grid > div:nth-child(5n) {
       background-color: #ffcc5c;
 }
 .grid > div:footer {
