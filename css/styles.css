@@ -42,16 +42,29 @@ body {
     font-family: var(--fs-body);
     font-size: var(--fs-body);
     line-height: 1.6;
+
 }
 
 section {
     padding: 5em 2em;
+    background-color: rgb(150, 0, 100);
+}
+
+@media::section(min-width: 800px) {
+    padding: 5em 2em;
+    background-color: rgb(150, 0, 100);
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 img {
   border-radius: 50%
-    display: block;
+    display: inline-flex;
     max-width: 50%;
+}
+footer {
+  color: rgb(80), 0, 20);
 }
 
 /*Typography*/
@@ -88,17 +101,18 @@ h3 { font-size: var(--fs-h3) }
   padding: 12px;
   font-size: 15px;
 }
-.menu {
-  width 100px;
+.nav-ul {
+  width 100%;
   background-color: #555;
-  }/*menu*/
+  }
+  /*menu*/
 
 /*About section*/
 * {box-sizing: border-box;}
 
-.about{
+.about-ov{
   position: relative;
-  width: 50%;
+  width: 100%;
   max-width: 400px;
 }
 
@@ -138,3 +152,23 @@ h3 { font-size: var(--fs-h3) }
   background-size: cover;
   color: var(--clr-light);
 }
+
+/*contact*/
+.nav-contact {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.nav-contact:hover {
+    transform: scale(1.1);
+}
+/*contact*/
