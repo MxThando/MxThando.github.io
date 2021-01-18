@@ -69,7 +69,9 @@ h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
 .headings {
-  font-size: var(--fs-h2)
+  color: var(--clr-accent);
+  font-size: var(--fs-h2);
+  position: relative;
 }
 .nav-ul {
   font-size: var(--fs-h3)
@@ -92,10 +94,12 @@ h3 { font-size: var(--fs-h3) }
   }/*menu*/
 
 /*About section*/
+* {box-sizing: border-box;}
+
 .about{
   position: relative;
   width: 50%;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .image {
@@ -118,11 +122,16 @@ h3 { font-size: var(--fs-h3) }
   padding: 20px;
   text-align: center;
 }
+
+.about:hover .overlay {
+  opacity: 1;
+}
+
 .nav-ul {
   width 90px;
   background-color: #555;
 }
-
+/*about*/
 .skills-bg {}
   background-color: var(--clr-dark);
   background-image: var(assets/presentation_laptop.jpg);
