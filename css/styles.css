@@ -45,6 +45,17 @@ body {
 
 }
 
+@media (min-width: 600px) {
+  body {
+    flex-wrap: nowrap;
+  }
+
+  section {
+    flex-basis: 33%;
+  }
+}
+
+
 section {
     padding: 5em 2em;
     background-color: rgb(150, 0, 100);
@@ -67,6 +78,8 @@ footer {
   color: rgb(80), 0, 20);
 }
 
+
+
 /*Typography*/
 
 
@@ -87,7 +100,9 @@ h3 { font-size: var(--fs-h3) }
   position: relative;
 }
 .nav-ul {
-  font-size: var(--fs-h3)
+  font-size: var(--fs-h3);
+  float:left;
+  text-align: center;
 }
 .nav-li {
   font-size: var(--fs-li)
@@ -101,7 +116,14 @@ h3 { font-size: var(--fs-h3) }
 /*Typography*/
 
 /*menu*/
+.nav-bar {
+  display: inline-block;
+  width 100%;
+  background-color: #555;
+}
+
 .nav-li {
+  display: inline;
   float: left;
   text-align: center;
   width: 20%;
@@ -113,6 +135,24 @@ h3 { font-size: var(--fs-h3) }
   background-color: #555;
   }
   /*menu*/
+/*grid layout*/
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  /*align-content: space-between;*/
+
+}
+.section {
+  flex-basis: 33%;
+  margin: 1.25rem;
+  height: 100px;
+  background-color: green;
+}
+@media::section (max-width: 600px) {
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+}
+/*grid layout*/
 
 /*About section*/
 * {box-sizing: border-box;}
