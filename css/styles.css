@@ -6,7 +6,7 @@
 
 :root{
     --ff-primary: @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Montserrat&display=swap');
-    --ff-secondary:  ;
+    --ff-secondary: @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -37,12 +37,23 @@
 
 body {
     background: var(--clr-light);
-    color: var(--clr-dark);
+    color: var(--clr-light);
     margin: 0;
-    font-family: var(--fs-body);
+    font-family: var(--fs-secondary);
     font-size: var(--fs-body);
     line-height: 1.6;
 
+}
+@media (min-width: 800px) {
+    .section {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .section + .section {
+        margin-left: 2em;
+    }
 }
 
 @media (min-width: 600px) {
@@ -100,7 +111,6 @@ h3 { font-size: var(--fs-h3) }
   position: relative;
 }
 .nav-ul {
-  font-size: var(--fs-h3);
   float:left;
   text-align: center;
 }
@@ -110,6 +120,7 @@ h3 { font-size: var(--fs-h3) }
 
 .p {
   font-size: var(--fs-p);
+  color: #000000
   position: relative;
 }
 
@@ -124,23 +135,39 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .nav-li {
+  min-width: 70px;
   display: inline;
   float: left;
   text-align: center;
-  width: 40px;
-  padding: 10px;
+  padding: 5px;
   font-size: 15px;
 }
 .nav-ul {
-  width 100%;
-  background-color: #555;
+  display: inline-block;
+  float: left;
+  padding: .5em 1.5em;
+  min-width: 100%;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font: var(--ff-primary);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+  }
+
+  .nav-contact:hover {
+      transform: scale(1.1);
   }
   /*menu*/
 /*grid layout*/
 .flexbox {
   display: flex;
   justify-content: space-between;
-  /*align-content: space-between;*/
+  align-content: space-between;
 
 }
 .section {
@@ -149,13 +176,14 @@ h3 { font-size: var(--fs-h3) }
   height: 100px;
   background-color: green;
 }
-@media::section (max-width: 600px) {
+@media: (max-width: 600px) {
   flex-basis: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  display
 }
 /*grid layout*/
 
-/*About section*/
+/*profile picture section*/
 * {box-sizing: border-box;}
 
 .about-ov{
@@ -165,9 +193,13 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .image {
+  grid-area: img;
+  min-width: 250px;
+  position: relative;
   display: block;
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 
 .overlay{
@@ -189,14 +221,23 @@ h3 { font-size: var(--fs-h3) }
   opacity: 1;
 }
 
-.nav-ul {
-  width 90px;
-  background-color: #555;
-}
+@media (min-width: 600px) {
+    .image {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img about-ov"
+            "img overlay";
+        grid-template-columns: min-content max-content;
+    }
+
+/* profile picture */
+
 /*about*/
 .skills-bg {}
   background-color: var(--clr-dark);
-  background-image: var(assets/presentation_laptop.jpg);
   background-size: cover;
   color: var(--clr-light);
 }
@@ -205,10 +246,12 @@ h3 { font-size: var(--fs-h3) }
 .nav-contact {
     display: inline-block;
     padding: .5em 1.5em;
+    min-width: 100%;
     background: var(--clr-accent);
     color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer;
+    font: var(--ff-primary);
     font-size: .8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
