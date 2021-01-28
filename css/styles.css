@@ -113,14 +113,15 @@ h3 { font-size: var(--fs-h3) }
 .nav-ul {
   float:left;
   text-align: center;
+  font-color: orange;
 }
 .nav-li {
-  font-size: var(--fs-li)
+  font-size: var(--fs-li);
 }
 
 .p {
   font-size: var(--fs-p);
-  color: #000000
+  color: #000000;
   position: relative;
 }
 
@@ -131,7 +132,8 @@ h3 { font-size: var(--fs-h3) }
   padding: 0px 0px;
   display: inline-block;
   min-width: 100%;
-  background-color: #555;
+  background-color: rgba(12, 194, 218, 0.856);
+  position: fixed;
 }
 
 .nav-li {
@@ -139,9 +141,15 @@ h3 { font-size: var(--fs-h3) }
   display: inline;
   float: left;
   text-align: center;
-  padding: 5px;
+  padding: 5px 30px 5px 30px ;
   font-size: 15px;
+  font-weight: var(--fw-bold);
 }
+
+.nav-li:hover {
+  transform: scale(1.1);
+}
+
 .nav-ul {
   display: inline-block;
   float: left;
@@ -157,6 +165,7 @@ h3 { font-size: var(--fs-h3) }
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
+  margin: 10px 20px;
   }
 
   .nav-contact:hover {
@@ -205,13 +214,12 @@ h3 { font-size: var(--fs-h3) }
 .overlay{
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(200, 99, 240, 0.5);
   color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
   opacity:0;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   padding: 20px;
   text-align: center;
@@ -236,7 +244,7 @@ h3 { font-size: var(--fs-h3) }
 /* profile picture */
 
 /*about*/
-.skills-bg {}
+.skills-bg {
   background-color: var(--clr-dark);
   background-size: cover;
   color: var(--clr-light);
@@ -244,8 +252,8 @@ h3 { font-size: var(--fs-h3) }
 
 /*contact*/
 .nav-contact {
-    display: inline-block;
-    padding: .5em 1.5em;
+    display: inline;
+    padding: 1em 2em;
     min-width: 100%;
     background: var(--clr-accent);
     color: var(--clr-dark);
@@ -259,7 +267,31 @@ h3 { font-size: var(--fs-h3) }
     transition: transform 200ms ease-in-out;
 }
 
-.nav-contact:hover {
+.nav-li:hover {
     transform: scale(1.1);
 }
+.nav-ul-contact {
+  display: inline-block;
+  float: right;
+  padding: .5em 1.5em;
+  min-width: 100%;
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font: var(--ff-primary);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+  margin: 10px 20px;
+  }
 /*contact*/
+
+/*footer*/
+footer {
+  background: var(--clr-dark);
+  font-style: var(--fs-secondary);
+  text-align: center;
+}
+/*footer*/
