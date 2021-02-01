@@ -14,25 +14,25 @@
     --clr-light: #E9EAE0;
     --clr-dark: #C85250;
     --clr-accent:#F7BEC0;
-    --clr-vogue: #E7625F;
+    --clr-highlight: #E7625F;
     --clr-ul: #dcdcd0;
     --clr-h3: #4b2221;
 
-    --fs-h1: 4rem;
-    --fs-h2: 3rem;
-    --fs-h3: 2rem;
-    --fs-p: 1.25rem;
-    --fs-li: 1.5rem;
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1rem;
+    --fs-p: 1.125rem;
+    --fs-li: 1rem;
 
 
 }
 
 @media (min-width: 800px) {
   :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
-    --fs-h3: 2rem;
-    --fs-body: 1.5rem;
+    --fs-h1: 4rem;
+    --fs-h2: 3.5rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
   }
 }
 
@@ -108,7 +108,7 @@ h3, {
 h1 { font-size: var(--fs-h1) }
 h2 {
   font-size: var(--fs-h2);
-  color: var(--clr-vogue);
+  color: var(--clr-highlight);
  }
 h3 { 
   font-size: var(--fs-h3);
@@ -133,7 +133,7 @@ nav {
 
 p {
   font-size: var(--fs-p);
-  color: #160d0d;
+  color: var(--clr-h3);
   position: relative;
 }
 
@@ -153,8 +153,8 @@ p {
   display: inline;
   float: left;
   text-align: center;
-  margin: 0px 5px 0px 5px;
-  padding: 5px 30px 5px 30px ;
+  margin: 0px 3px 0px 3px;
+  padding: 2px 30px 2px 30px ;
   font-size: 1.25em;
   font-weight: var(--fw-bold);
   background-color: var(--clr-accent)
@@ -233,7 +233,6 @@ p {
 .overlay{
   position: absolute;
   bottom: 0;
-  background: rgba(232, 210, 241, 0.89);
   color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
