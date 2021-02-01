@@ -11,16 +11,18 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #d3bab1;
-    --clr-dark: #79808a;
-    --clr-accent: #f1e6c8;
+    --clr-light: #E9EAE0;
+    --clr-dark: #C85250;
+    --clr-accent:#F7BEC0;
+    --clr-vogue: #E7625F;
     --clr-ul: #dcdcd0;
+    --clr-h3: #4b2221;
 
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-p: 2.00rem;
-    --fs-li: 1.10rem;
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2rem;
+    --fs-p: 1.25rem;
+    --fs-li: 1.5rem;
 
 
 }
@@ -70,7 +72,7 @@ body {
 
 section {
     padding: 5em 2em;
-    background-color: rgb(200, 245, 241);
+    background-color: var(--clr-light);
 }
 
 @media::section(min-width: 800px) {
@@ -103,11 +105,17 @@ h3, {
 }
 
 h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--clr-vogue);
+ }
+h3 { 
+  font-size: var(--fs-h3);
+  color: var(--clr-h3)
+}
 
 .headings {
-  color: var(--clr-accent);
+  color: var(--clr-dark);
   font-size: var(--fs-h2);
   position: relative;
 }
@@ -118,10 +126,13 @@ h3 { font-size: var(--fs-h3) }
 li {
   font-size: var(--fs-li);
 }
+nav {
+  font-size: var(--fs-li);
+}
 
 p {
   font-size: var(--fs-p);
-  color: #000000;
+  color: #160d0d;
   position: relative;
 }
 
@@ -132,20 +143,20 @@ p {
   padding: 0px 0px;
   display: inline-block;
   min-width: 100%;
-  background-color: rgba(12, 194, 218, 0.856);
+  background-color:var(--clr-light);
   position: fixed;
 }
 
 .nav-li {
-  min-width: 70px;
+  min-width: 0.5rem;
   display: inline;
   float: left;
   text-align: center;
   margin: 0px 5px 0px 5px;
   padding: 5px 30px 5px 30px ;
-  font-size: 15px;
+  font-size: 1.25em;
   font-weight: var(--fw-bold);
-  background-color:rgb(255, 255, 255)
+  background-color: var(--clr-accent)
   
 }
 
@@ -166,10 +177,10 @@ p {
   font: var(--ff-primary);
   font-size: .8rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
-  margin: 10px 20px;
+  margin: 0.5em 1em;
   }
 
   .nav-contact:hover {
@@ -185,8 +196,8 @@ p {
 }
 .section {
   flex-basis: 33%;
-  margin: 1.25rem;
-  height: 100px;
+  margin: 1.25em;
+  height: 5em;
 }
 @media: (max-width: 600px) {
   flex-basis: 100%;
@@ -202,11 +213,11 @@ p {
   align-items: center;
 }
 
-.about-ov{
+/*.about-ov{
   position: relative;
   width: 100%;
   max-width: 400px;
-}
+}*/
 
 .image {
   grid-area: img;
@@ -293,12 +304,12 @@ p {
   text-decoration: none;
   cursor: pointer;
   font: var(--ff-primary);
-  font-size: .8rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
-  margin: 5px 10px;
+  margin: 0.5em 1em;
   }
 /*contact*/
 
@@ -307,5 +318,6 @@ footer {
   background: var(--clr-dark);
   font-style: var(--fs-secondary);
   text-align: center;
+  position: relative;
 }
 /*footer*/
