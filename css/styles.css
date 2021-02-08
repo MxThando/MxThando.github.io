@@ -126,6 +126,7 @@ h3 {
 }
 li {
   font-size: var(--fs-li);
+  text-decoration: inherit;
 }
 nav {
   font-size: var(--fs-li);
