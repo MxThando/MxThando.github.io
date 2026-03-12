@@ -225,7 +225,7 @@
 <body>
 
     <nav class="nav-bar">
-        <a class="nav-logo" onclick="showSection('home')">THANDO.M</a>
+        <a class="nav-logo" onclick="showSection('home')">THANDO</a>
         <ul class="nav-ul">
             <li class="nav-li"><a onclick="showSection('home')">Home</a></li>
             <li class="nav-li"><a onclick="showSection('experience')">Experience</a></li>
