@@ -1,73 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en-ZA">
+<head>
     <meta charset="UTF-8">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="assets/" rel="stylesheet">
-    <title>Thando Portfolio Website</title>
-    </head>
-    <body>
-      <section class="nav-bar">
-          <ul class="nav-ul">
-            <li class="nav-li"><a href="#about">About Me</a></li>
-            <li class="nav-li"><a href="#skills">Skills</a></li>
-            <li class="nav-li"><a href="#interests">Interests</a></li>
-            <li class="nav-li"><a href="#contact">Contact</a></li>
-            <li class="nav-li"><a href="https://medium.com/@MxThando" target="_blank">Blog</a></li>
-          </ul>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thando Msutwana | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a class="nav-logo" onclick="showSection('home')">THANDO.M</a>
+        <ul class="nav-ul">
+            <li class="nav-li"><a onclick="showSection('home')">Home</a></li>
+            <li class="nav-li"><a onclick="showSection('experience')">Experience</a></li>
+            <li class="nav-li"><a onclick="showSection('projects')">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-content">
+        <section id="home" class="section active">
+            <div class="hero">
+                <img src="assets/vinylshopping" class="profile-img" alt="Thando Msutwana">
+                <div>
+                    <h1>Thando Msutwana</h1>
+                    <p class="cv-meta">Reporting and Data Analyst | South Africa</p>
+                    <p class="about-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="social-container">
+                        <a href="https://medium.com/@MxThando" target="_blank" class="social-link">Medium</a>
+                        <a href="https://www.kaggle.com/mxthando" target="_blank" class="social-link">Kaggle</a>
+                        <a href="https://www.codewars.com/users/MxThando" target="_blank" class="social-link">Codewars</a>
+                        <a href="https://www.linkedin.com/tmsutwana" target="_blank" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
         </section>
-      
-    <!--home-->
-    <!--profile picture
-        <section class ="profile">
-        <div class="about">
-          <img class="image" src="assets/Thando.jpg" alt="a picure of Thando">
+
+        <section id="experience" class="section">
+            <h2>Work Experience</h2>
+            <div class="cv-grid">
+                <div class="cv-item">
+                    <span class="cv-title">Job Title | Company Name</span>
+                    <span class="cv-meta">Month Year – Present</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <h2>Education</h2>
+            <div class="cv-grid">
+                <div class="cv-item">
+                    <span class="cv-title">Degree Name</span>
+                    <span class="cv-meta">University Name | Year</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">SQL & Python</span>
+                        <h3>Sales Data Pipeline</h3>
+                        <p>Automated reporting pipeline for retail data, transforming raw CSV files into actionable Power BI dashboards.</p>
+                        <a href="#" class="project-link">View on Kaggle →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">Business Intelligence</span>
+                        <h3>Customer Churn Analysis</h3>
+                        <p>Identifying key churn drivers using SQL queries and providing strategic recommendations for retention.</p>
+                        <a href="#" class="project-link">View Repository →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-tag">Data Visualisation</span>
+                        <h3>Operational Efficiency Dashboard</h3>
+                        <p>A comprehensive Power BI suite designed to track team KPIs and reporting accuracy over time.</p>
+                        <a href="#" class="project-link">Live Demo →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Thando Msutwana</strong></p>
+        <p>Reporting and Data Analyst | South Africa</p>
+        <div class="footer-socials">
+            <a href="https://medium.com/@MxThando" target="_blank">Medium</a>
+            <a href="https://www.kaggle.com/mxthando" target="_blank">Kaggle</a>
+            <a href="https://www.linkedin.com/tmsutwana" target="_blank">LinkedIn</a>
         </div>
-        </section>
-      profile picture-->
-      <!--<div class="flexbox"></div>-->
-    <!--bio-->
-      <section id="about">
-      <h2 class="headings">About</h2>
-        <h3>Data Science Recruit</h3>
-        <p class= "paragraph-about">
-          I am Thando Msutwana, I recently graduated with a BA Politics, Philosophy and Economics degree from the university of South Africa. When I started the Umuzi bootcamp in November I had just completed my degree after the June exam and was waiting for my qualification to be audited.
-          I am currently in the Data Science stream of the Umuzi learnership, which when completed I will be in possession of a business analysis certificate. I am excited about this because I initially studied PPE because to me, amongst other things, it helps a great deal in contextualising how people and groups of people tend to organise themselves in society, along with my long love of technology and development Data Science was a natural choice for me to pursue.
-        </p>
-      </section>
-    <!--bio-->
-      <!--My Skills-->
-      <section id="skills">
-        <h2 class="headings">What I can Do</h2>
-          <h3>Python programming</h3>
-          <h3>Make Excel spreadsheets</h3>
-          <h3>R studio for statistical analysis</h3>
-          <h3>Work in the various Microsoft Office Suit applications</h3>
-          <h3>Public speaking, communication and the disemination of important information</h3>
-      </section> <!--My Skills-->
-      <!-- My interests-->
-      <section id="interests">
-        <h2 class="headings">Interests</h2>
-        <h3>Behavioural and Social Psychology</h3>
-        <h3>Machine Learning</h3>
-        <h3>Telecommunications tech and news</h3>
-        <h3>Reading</h3>
-        <h3>Music and Festivals</h3>
-      </section>
-      <!--My interests-->
-    <!--</div>-->
-     <!--Contact details-->
-     <section id="contact">
-      <h2 class="headings">Contact And Portfolio</h2>
-      <div class="nav-ul-contact">
-        <a class="nav-contact" href="mailto:Thando.Msutwana@umuzi.org" target="_blank">Email</a>
-        <a class="nav-contact" href="https://www.kaggle.com/mxthando" target="_blank">Kaggle</a>
-        <a class="nav-contact" href="https://github.com/MxThando" target="_blank">Github</a>
-        <a class="nav-contact" href="https://www.codewars.com/users/MxThando" target="_blank">CodeWars</a>
-        <a class="nav-contact" href="https://linkedin.com/tmsutwana" target="_blank">LinkedIn</a>
-      </div>
-    </section>
-    <!--Contact detals-->
-    <footer class="footer">Umuzi</footer>
-  </body>
+        <p style="margin-top: 2rem; font-size: 0.75rem; opacity: 0.6;">&copy; 2026. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
 </html>

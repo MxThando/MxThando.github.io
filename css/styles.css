@@ -1,315 +1,66 @@
-<!DOCTYPE html>
-<html lang="en-ZA">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thando Msutwana | Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Playfair+Display:wght@700&display=swap');
+/* Add this to your existing styles.css */
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+/* Project Section Styling */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
-        :root {
-            --ff-primary: 'Montserrat', sans-serif;
-            --ff-secondary: 'Playfair Display', serif;
-            --clr-bg: #F8F9FA;
-            --clr-primary: #5D9CEC;
-            --clr-accent: #E1AD01;
-            --clr-text: #2C3E50;
-            --clr-white: #ffffff;
-            --clr-muted: #546E7A;
-        }
+.project-card {
+    background: var(--clr-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
 
-        body {
-            background-color: var(--clr-bg);
-            color: var(--clr-text);
-            margin: 0;
-            font-family: var(--ff-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-bottom: 4px solid var(--clr-primary);
+}
 
-        /* Navigation */
-        .nav-bar {
-            background-color: var(--clr-white);
-            padding: 1.5rem 2rem; /* Reduced base padding */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: padding 0.3s ease;
-        }
+.project-content {
+    padding: 2rem;
+}
 
-        @media (min-width: 768px) {
-            .nav-bar { padding: 2.5rem 4rem; }
-        }
+.project-tag {
+    background: #E3F2FD;
+    color: var(--clr-primary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
 
-        .nav-logo {
-            font-family: var(--ff-secondary);
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--clr-primary);
-            cursor: pointer;
-            text-decoration: none;
-        }
+.project-card h3 {
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+    color: var(--clr-text);
+}
 
-        .nav-ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 1.5rem;
-        }
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--clr-muted);
+    margin-bottom: 1.5rem;
+}
 
-        .nav-li a {
-            text-decoration: none;
-            color: var(--clr-text);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            cursor: pointer;
-        }
+.project-link {
+    text-decoration: none;
+    color: var(--clr-accent);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
 
-        /* Content Container */
-        .page-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem; /* Reduced padding for mobile */
-            min-height: 70vh;
-        }
-
-        @media (min-width: 768px) {
-            .page-content { padding: 4rem 2rem; }
-        }
-
-        .section {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        .active { display: block; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Hero Styling */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr; /* Stacked by default */
-            align-items: center;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        @media (min-width: 850px) {
-            .hero {
-                grid-template-columns: 1fr 1.2fr;
-                text-align: left;
-                gap: 5rem;
-            }
-        }
-
-        .profile-img {
-            width: 100%;
-            max-width: 300px;
-            margin: 0 auto;
-            border-radius: 50%;
-            border: 8px solid var(--clr-white);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            outline: 3px solid var(--clr-accent);
-        }
-
-        @media (min-width: 768px) {
-            .profile-img { max-width: 400px; }
-        }
-
-        h1 { 
-            font-family: var(--ff-secondary); 
-            font-size: 2.5rem; 
-            color: var(--clr-primary); 
-            margin: 0; 
-            line-height: 1.1;
-        }
-
-        @media (min-width: 768px) {
-            h1 { font-size: 3.5rem; }
-        }
-
-        h2 { 
-            font-family: var(--ff-secondary); 
-            font-size: 1.75rem; 
-            color: var(--clr-text); 
-            border-bottom: 4px solid var(--clr-accent); 
-            display: inline-block; 
-            margin-bottom: 2rem; 
-            margin-top: 2rem;
-        }
-
-        .about-text { font-size: 1.1rem; color: var(--clr-muted); margin: 1.5rem 0; }
-
-        /* Social Links */
-        .social-container {
-            display: flex;
-            gap: 0.75rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        @media (min-width: 850px) {
-            .social-container { justify-content: flex-start; }
-        }
-
-        .social-link {
-            text-decoration: none;
-            color: var(--clr-white);
-            background-color: var(--clr-primary);
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover { background-color: var(--clr-accent); }
-
-        /* Experience Styling */
-        .cv-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 900px) {
-            .cv-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        .cv-item {
-            background: var(--clr-white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-top: 5px solid var(--clr-primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-        }
-
-        .cv-title { font-weight: 700; color: var(--clr-text); font-size: 1.1rem; display: block; margin-bottom: 0.5rem; }
-        .cv-meta { color: var(--clr-accent); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; display: block; margin-bottom: 0.75rem; }
-
-        footer {
-            background: var(--clr-text);
-            color: #CFD8DC;
-            text-align: center;
-            padding: 4rem 1.5rem;
-        }
-
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-socials a { color: var(--clr-accent); text-decoration: none; font-weight: 700; font-size: 0.8rem; }
-    </style>
-</head>
-<body>
-
-    <nav class="nav-bar">
-        <a class="nav-logo" onclick="showSection('home')">THANDO</a>
-        <ul class="nav-ul">
-            <li class="nav-li"><a onclick="showSection('home')">Home</a></li>
-            <li class="nav-li"><a onclick="showSection('experience')">Experience</a></li>
-        </ul>
-    </nav>
-
-    <main class="page-content">
-        <section id="home" class="section active">
-            <div class="hero">
-                <img src="assets/vinylshopping" class="profile-img" alt="Thando Msutwana">
-                <div>
-                    <h1>Thando Msutwana</h1>
-                    <p class="cv-meta">Reporting and Data Analyst | South Africa</p>
-                    <p class="about-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <div class="social-container">
-                        <a href="https://medium.com/@MxThando" target="_blank" class="social-link">Medium</a>
-                        <a href="https://www.kaggle.com/mxthando" target="_blank" class="social-link">Kaggle</a>
-                        <a href="https://www.codewars.com/users/MxThando" target="_blank" class="social-link">Codewars</a>
-                        <a href="https://www.linkedin.com/tmsutwana" target="_blank" class="social-link">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Work Experience</h2>
-            <div class="cv-grid">
-                <div class="cv-item">
-                    <span class="cv-title">Job Title | Company Name</span>
-                    <span class="cv-meta">Month Year – Present</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="cv-item">
-                    <span class="cv-title">Job Title | Company Name</span>
-                    <span class="cv-meta">Month Year – Month Year</span>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                </div>
-            </div>
-
-            <h2>Education</h2>
-            <div class="cv-grid">
-                <div class="cv-item">
-                    <span class="cv-title">Degree Name</span>
-                    <span class="cv-meta">University Name | Year of Graduation</span>
-                </div>
-                <div class="cv-item">
-                    <span class="cv-title">Diploma or Certificate Name</span>
-                    <span class="cv-meta">Institution Name | Year of Completion</span>
-                </div>
-            </div>
-
-            <h2>Skills & Tools</h2>
-            <div class="cv-item">
-                <p><strong>Technical:</strong> Lorem Ipsum, Dolor Sit Amet, Consectetur, Adipiscing Elit.</p>
-                <p><strong>Tools:</strong> SQL, Python, Microsoft Excel, Power BI.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p><strong>Thando Msutwana</strong></p>
-        <p>Reporting and Data Analyst | South Africa</p>
-        <div class="footer-socials">
-            <a href="https://medium.com/@MxThando" target="_blank">Medium</a>
-            <a href="https://www.kaggle.com/mxthando" target="_blank">Kaggle</a>
-            <a href="https://www.codewars.com/users/MxThando" target="_blank">Codewars</a>
-            <a href="https://www.linkedin.com/tmsutwana" target="_blank">LinkedIn</a>
-        </div>
-        <p style="margin-top: 2rem; font-size: 0.75rem; opacity: 0.6;">&copy; 2026. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(sec => sec.classList.remove('active'));
-
-            const target = document.getElementById(sectionId);
-            if (target) {
-                target.classList.add('active');
-            }
-            window.scrollTo(0, 0);
-        }
-    </script>
-</body>
-</html>
+.project-link:hover {
+    color: var(--clr-primary);
+}
