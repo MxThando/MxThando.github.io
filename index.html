@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH549YS5TM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JH549YS5TM');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thando Msutwana | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+
+  <title>Thando Msutwana | Reporting and Data Analyst Portfolio</title>
+<meta name="description" content="Professional portfolio of Thando Msutwana, a Reporting and Data Analyst in South Africa specialising in SQL, Python, and BI.">
+<meta name="keywords" content="Thando Msutwana, Data Analyst, South Africa, SQL, Power BI">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Thando Msutwana",
+  "jobTitle": "Reporting and Data Analyst",
+  "url": "https://mxthando.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/tmsutwana",
+    "https://medium.com/@MxThando",
+    "https://www.kaggle.com/mxthando"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -117,6 +145,16 @@
             }
             window.scrollTo(0, 0);
         }
+        document.querySelectorAll('.social-link').forEach(link => {
+        link.addEventListener('click', function() {
+            const platform = this.textContent;
+            gtag('event', 'social_link_click', {
+                'link_name': platform,
+                'link_url': this.href,
+                'event_category': 'Engagement'
+            });
+        });
+    });
     </script>
 </body>
 </html>
